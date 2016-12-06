@@ -7,7 +7,7 @@ OBJS = main.o util.o integrators.o test_cases.o
 all: vortices
 
 vortices: $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o vortices
+	$(CC) $(LDFLAGS) $(CFLAGS) $(OBJS) -o vortices
 
 %.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
